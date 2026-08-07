@@ -1,7 +1,6 @@
 # 📦 Orders API - Sistema de Gestão de Pedidos
 
-Uma Web API em .NET desenvolvida com foco em arquitetura orientada a eventos, utilizando **SQL Server** para persistência de dados e **RabbitMQ** para mensageria assíncrona.
-
+Uma Web API em .NET desenvolvida para gerenciamento de pedidos.
 ---
 
 ## 🛠️ Tecnologias Utilizadas
