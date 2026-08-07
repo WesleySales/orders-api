@@ -165,3 +165,15 @@ Content-Type: application/json
 - O status do pedido é representado pelo enum `StatusPedido`: `CRIADO` (1) ou `CANCELADO` (2).
 
 ---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Wesley Sales**, Desenvolvedor Backend.
+
+### 📫 Contato
+- E-mail: [wesleysales.vb@gmail.com](mailto:wesleysales.vb@gmail.com)
+- GitHub: [github.com/WesleySales](https://github.com/WesleySales)
+- LinkedIn: [linkedin.com/in/wesley-v-sales](https://www.linkedin.com/in/wesley-v-sales/)
+
+---
+
