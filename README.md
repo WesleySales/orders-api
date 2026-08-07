@@ -62,20 +62,25 @@ Certifique-se de que o Docker Desktop esteja aberto e execute, na raiz do projet
 docker compose up -d
 ```
 
+#### 3. Restaurar as dependências do projeto
+```bash
+dotnet restore
+```
+
 Aguarde alguns segundos até o SQL Server terminar de inicializar. Para confirmar que os dois containers estão de pé:
 ```bash
 docker compose ps
 ```
 Você deve ver `orders-sqlserver` e `rabbitmq_broker` com status `running``.
 
-#### 3. Aplicar as Migrations do Entity Framework
+#### 4. Aplicar as Migrations do Entity Framework
 Cria o banco `OrdersDb` e as tabelas `Pedidos`/`Itens` no SQL Server que subiu no passo 2:
 ```bash
 dotnet ef database update
 ```
 > Se o comando falhar com erro de conexão, o SQL Server provavelmente ainda está inicializando dentro do container — aguarde alguns segundos e tente novamente.
 
-#### 4. Rodar a aplicação
+#### 5. Rodar a aplicação
 ```bash
 dotnet run
 ```
@@ -88,7 +93,7 @@ Com isso a API sobe (via `Properties/launchSettings.json`) em:
 O RabbitMQ Management fica disponível em `http://localhost:15672` (usuário/senha `guest`/`guest`) — útil para acompanhar as filas `PedidoCriado` e `PedidoCancelado` sendo consumidas em tempo real.
 obs: os consumers estao exibindo uma mensagem no console da aplicação.
 
-#### 5. Parar o ambiente
+#### 6. Parar o ambiente
 Para encerrar a API, use `Ctrl+C` no terminal. Para derrubar os containers de infraestrutura:
 ```bash
 docker compose down
