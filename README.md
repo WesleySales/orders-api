@@ -145,6 +145,7 @@ Content-Type: application/json
   },
   "traceId": "00-eb59ac613e8c250bf47de9099537c05d-557bdfe0ded1760c-00"
 }
+```
 
 
 - Um pedido já cancelado não pode ser cancelado novamente.
@@ -155,7 +156,7 @@ Content-Type: application/json
   "detail": "Este pedido já se encontra cancelado.",
   "instance": "/api/Pedido/1/cancelar"
 }
-
+```
 - Tentar buscar ou cancelar um pedido inexistente retorna `404 Not Found`.
 ```bash
 {
@@ -167,8 +168,9 @@ Content-Type: application/json
 
 - O `ValorTotal` do pedido é calculado automaticamente a partir da soma de `Quantidade * PrecoUnitario` dos itens.
 - O status do pedido é representado pelo enum `StatusPedido`: `CRIADO` (1) ou `CANCELADO` (2).
-
+```
 ---
+
 
 ## 👨‍💻 Autor
 
